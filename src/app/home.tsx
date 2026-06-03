@@ -1,8 +1,13 @@
 import ButtonComp from "@/components/button";
+import { router } from "expo-router";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
+  const handleSigninNavigation = () => {
+    router.push("/signin");
+  };
+
   return (
     <SafeAreaView style={styles.safeAreaViewContainer}>
       <View style={styles.container}>
@@ -21,6 +26,7 @@ export default function Home() {
         </View>
         <View style={styles.btnContainer}>
           <ButtonComp
+            onPress={handleSigninNavigation}
             btnText="Sign In"
             containerColor="#00D09E"
             contentColor="black"
