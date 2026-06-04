@@ -8,6 +8,14 @@ export default function Home() {
     router.push("/signin");
   };
 
+  const handleSignupNavigation = () => {
+    router.push("/signup");
+  };
+
+  const handleForgotPasswordNavigation = () => {
+    router.push("/forgot-password");
+  };
+
   return (
     <SafeAreaView style={styles.safeAreaViewContainer}>
       <View style={styles.container}>
@@ -32,13 +40,19 @@ export default function Home() {
             contentColor="black"
           />
           <ButtonComp
+            onPress={handleSignupNavigation}
             btnText="Sign Up"
             containerColor="#DFF7E2"
             contentColor="black"
           />
         </View>
         <View>
-          <Text style={[styles.forgotText, styles.text]}>Forgot Password?</Text>
+          <Text
+            onPress={handleForgotPasswordNavigation}
+            style={[styles.forgotText, styles.text]}
+          >
+            Forgot Password?
+          </Text>
         </View>
       </View>
     </SafeAreaView>

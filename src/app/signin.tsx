@@ -30,10 +30,7 @@ export default function OnBoardingScreen() {
               contentColor="black"
             />
             <Text style={styles.miniText}>User Fingerprint to access.</Text>
-            <Text
-              onPress={() => handleSignupNavigation()}
-              style={styles.miniText}
-            >
+            <Text onPress={handleSignupNavigation} style={styles.miniText}>
               Don't have an account? Signup
             </Text>
           </View>
