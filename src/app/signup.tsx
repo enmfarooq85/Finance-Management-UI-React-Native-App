@@ -25,22 +25,18 @@ export default function OnBoardingScreen() {
           <InputComp label="Phone Number" placeholder="+92123456789" />
           <InputComp label="Password" placeholder=" ******* " />
           <InputComp label="Confirm Password" placeholder=" ******* " />
-          <View style={styles.inputMainContainer}>
-            <View style={styles.inputContainer}>
-              <ButtonComp
-                onPress={handleSignin}
-                btnText="Signup"
-                containerColor="#00D09E"
-                contentColor="black"
-              />
-              <Text
-                onPress={() => handleSigninNavigation()}
-                style={styles.miniText}
-              >
-                Already have an account? Signin
-              </Text>
-            </View>
-          </View>
+          <ButtonComp
+            onPress={handleSignin}
+            btnText="Signup"
+            containerColor="#00D09E"
+            contentColor="black"
+          />
+          <Text
+            onPress={() => handleSigninNavigation()}
+            style={styles.miniText}
+          >
+            Already have an account? Signin
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -70,18 +66,10 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     paddingHorizontal: 20,
   },
-  inputMainContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-  },
-  inputContainer: {
-    gap: 5,
-    width: "80%",
-  },
   miniText: {
     fontSize: 15,
     textAlign: "center",
     fontWeight: "bold",
+    marginTop: 10,
   },
 });

@@ -13,6 +13,10 @@ export default function OnBoardingScreen() {
     router.push("/signup");
   };
 
+  const handleFingerPrintNavigation = () => {
+    router.push("/finger-print");
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
@@ -21,20 +25,18 @@ export default function OnBoardingScreen() {
       <View style={styles.content}>
         <InputComp label="Email" placeholder="user@gmail.com" />
         <InputComp label="Password" placeholder=" ******* " />
-        <View style={styles.inputMainContainer}>
-          <View style={styles.inputContainer}>
-            <ButtonComp
-              onPress={handleSignin}
-              btnText="Signin"
-              containerColor="#00D09E"
-              contentColor="black"
-            />
-            <Text style={styles.miniText}>User Fingerprint to access.</Text>
-            <Text onPress={handleSignupNavigation} style={styles.miniText}>
-              Don't have an account? Signup
-            </Text>
-          </View>
-        </View>
+        <ButtonComp
+          onPress={handleSignin}
+          btnText="Signin"
+          containerColor="#00D09E"
+          contentColor="black"
+        />
+        <Text style={styles.miniText} onPress={handleFingerPrintNavigation}>
+          User Fingerprint to access.
+        </Text>
+        <Text onPress={handleSignupNavigation} style={styles.miniText}>
+          Don't have an account? Signup
+        </Text>
       </View>
     </SafeAreaView>
   );
@@ -63,18 +65,10 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
     paddingHorizontal: 20,
   },
-  inputMainContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-  },
-  inputContainer: {
-    gap: 5,
-    width: "80%",
-  },
   miniText: {
     fontSize: 15,
     textAlign: "center",
     fontWeight: "bold",
+    marginTop: 10,
   },
 });
