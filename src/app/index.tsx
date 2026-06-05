@@ -15,7 +15,7 @@ export default function OnBoardingScreen() {
 
     // LEETCODE: so false means always on the second onboarding
     if (!isFirstOnBoarding) {
-      router.push("/home");
+      router.push("./screens/home");
     }
   };
 

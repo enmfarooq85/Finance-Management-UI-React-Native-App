@@ -1,30 +1,28 @@
-import ButtonComp from "@/components/button";
 import { router } from "expo-router";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import ButtonComp from "@/components/button";
+
+const LOGO = require("../../../assets/images/logo.png");
 
 export default function Home() {
   const handleSigninNavigation = () => {
-    router.push("/signin");
+    router.push("./signin");
   };
 
   const handleSignupNavigation = () => {
-    router.push("/signup");
+    router.push("./signup");
   };
 
   const handleForgotPasswordNavigation = () => {
-    router.push("/forgot-password");
+    router.push("./forgot-password");
   };
 
   return (
     <SafeAreaView style={styles.safeAreaViewContainer}>
       <View style={styles.container}>
         <View>
-          <Image
-            source={require("../../assets/images/logo.png")}
-            height={114}
-            width={109}
-          />
+          <Image source={LOGO} height={114} width={109} />
         </View>
         <View style={styles.headingAndDescriptionContainer}>
           <Text style={[styles.headingText, styles.text]}>FinWise</Text>

@@ -1,8 +1,8 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, View, Alert, ScrollView } from "react-native";
+import { router } from "expo-router";
 import InputComp from "@/components/input";
 import ButtonComp from "@/components/button";
-import { router } from "expo-router";
 
 export default function OnBoardingScreen() {
   const handleSignin = () => {
@@ -10,7 +10,7 @@ export default function OnBoardingScreen() {
   };
 
   const handleSigninNavigation = () => {
-    router.push("/signin");
+    router.push("./signin");
   };
 
   return (

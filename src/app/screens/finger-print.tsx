@@ -1,11 +1,13 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet, Text, View, Alert, Image } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import ButtonComp from "@/components/button";
-const ONBOARDING2 = require("../../assets/images/fingerprint.png");
+import { router } from "expo-router";
+
+const ONBOARDING2 = require("../../../assets/images/fingerprint.png");
 
 export default function FingerPrintScreen() {
   const handleSecurityFingerPrint = () => {
-    Alert.alert("Success!!!");
+    router.push("../(tabs)/user-home");
   };
 
   return (

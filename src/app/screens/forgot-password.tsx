@@ -6,7 +6,7 @@ import ButtonComp from "@/components/button";
 
 export default function ForgotPasswordScreen() {
   const handleResetPasswordNavigation = () => {
-    router.push("/reset-password");
+    router.push("./reset-password");
   };
 
   return (
