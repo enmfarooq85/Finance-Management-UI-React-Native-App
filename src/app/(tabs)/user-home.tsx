@@ -10,6 +10,7 @@ import {
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import { useState } from "react";
+import { router } from "expo-router";
 
 const CAR = require("../../../assets/images/car.png");
 const SALARY = require("../../../assets/images/salary.png");
@@ -66,6 +67,10 @@ export default function UserHomeScreen() {
 
   const currentData = data[activeFilter];
 
+  const handleNotificationNavigation = () => {
+    router.push("/screens/notifications");
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
@@ -76,7 +81,12 @@ export default function UserHomeScreen() {
           </View>
 
           <View style={styles.notificationContainer}>
-            <Ionicons name="notifications-outline" size={24} color="black" />
+            <Ionicons
+              onPress={handleNotificationNavigation}
+              name="notifications-outline"
+              size={24}
+              color="black"
+            />
           </View>
         </View>
 
