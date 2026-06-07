@@ -107,7 +107,7 @@ export default function UserHomeScreen() {
             <View>
               <View style={styles.leftBottomHeaderContainer}>
                 <View style={styles.arrowsContainer}>
-                  <Feather name="arrow-up-right" size={15} color="black" />
+                  <Feather name="arrow-down-right" size={15} color="black" />
                 </View>
                 <Text style={styles.labelText}>Total Balance</Text>
               </View>
